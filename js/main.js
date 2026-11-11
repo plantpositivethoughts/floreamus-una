@@ -30,13 +30,13 @@ function renderPlants(filter) {
     <div class="card">
       <div class="card-img">${art(p.art)}</div>
       <div class="card-body">
-        <h3>${p.name}</h3><p class="latin">${p.latin}</p>
+        <h3><a href="${slug(p.name)}-care.html">${p.name}</a></h3><p class="latin">${p.latin}</p>
         <div class="tags">
           ${p.pet ? '<span class="tag">Pet-friendly</span>' : '<span class="tag warn">Keep away from pets</span>'}
           ${p.easy ? '<span class="tag">Easy-care</span>' : ''}
           ${p.light.includes('low') ? '<span class="tag">Low light OK</span>' : ''}
         </div>
-        <a class="care-link" href="the-greenroom.html#${slug(p.name)}">Read the care guide →</a>
+        <a class="care-link" href="${slug(p.name)}-care.html">Read the care guide →</a>
         <div class="card-foot">
           <span class="price">${p.price ? '£' + p.price : 'Coming soon'}</span>
           ${p.buyUrl ? `<a class="btn btn-primary btn-sm" href="${p.buyUrl}" target="_blank" rel="noopener">Buy</a>` : `<a class="btn btn-ghost btn-sm" href="#newsletter">Notify me</a>`}
@@ -66,7 +66,7 @@ $('finder-go')?.addEventListener('click', () => {
     .filter(p => rank[p.care] <= rank[answers.time]);
   if (answers.time === 'lots') matches.sort((a, b) => rank[b.care] - rank[a.care]);
   if (!matches.length) matches = PLANTS.filter(p => (answers.pets === 'no' || p.pet) && p.easy);
-  box.innerHTML = `<h3>Your matches</h3><ul>${matches.slice(0, 5).map(p => `<li><a href="the-greenroom.html#${slug(p.name)}" style="color:inherit"><strong>${p.name}</strong></a> <em>(${p.latin})</em>${p.pet ? ' · pet-friendly' : ''}</li>`).join('')}</ul>`;
+  box.innerHTML = `<h3>Your matches</h3><ul>${matches.slice(0, 5).map(p => `<li><a href="${slug(p.name)}-care.html" style="color:inherit"><strong>${p.name}</strong></a> <em>(${p.latin})</em>${p.pet ? ' · pet-friendly' : ''}</li>`).join('')}</ul>`;
 });
 
 /* ---------- The Greenroom: A–Z care guides with search ---------- */
@@ -79,6 +79,7 @@ function renderGuides(q = '') {
       <p style="color:var(--muted);font-size:.93rem;margin-top:.6rem"><em>${p.latin}</em> · ${p.intro}</p>
       <div class="tags" style="margin-top:.4rem">${p.pet ? '<span class="tag">Pet-friendly</span>' : '<span class="tag warn">Keep away from pets</span>'}${p.easy ? '<span class="tag">Easy-care</span>' : '<span class="tag">Needs some experience</span>'}</div>
       <dl>${Object.entries(p.guide).map(([k, v]) => `<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl>
+      <p style="margin-top:10px"><a href="${slug(p.name)}-care.html" style="color:var(--brown);font-weight:600;font-size:.9rem">Read the full ${p.name} guide →</a></p>
     </details>`).join('') : '<p style="color:var(--muted);padding:16px 0">No plants match that search.</p>';
 }
 renderGuides();
