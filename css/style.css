@@ -307,3 +307,31 @@
   .theme h3{font-size:1.25rem;margin:.4rem 0}
   .theme p{color:var(--muted);font-size:.93rem}
   @media (max-width:700px){.themes{grid-template-columns:1fr}}
+  /* Field Guide */
+  .guide{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;padding:48px 0;border-bottom:1px solid var(--sand)}
+  .guide:last-child{border-bottom:0}
+  .guide h2{font-size:clamp(1.8rem,3.5vw,2.4rem)}
+  .guide-steps{margin:0 0 0 1.2rem;color:var(--muted)}
+  .guide-steps li{margin-bottom:.3rem}
+  .carousel{position:relative}
+  .track{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--radius);scrollbar-width:none;box-shadow:0 12px 32px rgba(27,48,34,.12)}
+  .track::-webkit-scrollbar{display:none}
+  .track img{flex:0 0 100%;width:100%;scroll-snap-align:start;aspect-ratio:4/5;object-fit:cover}
+  .cbtn{position:absolute;top:50%;transform:translateY(-50%);width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:var(--forest);font-size:1.6rem;line-height:1;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+  .cbtn.prev{left:10px}.cbtn.next{right:10px}
+  .cbtn[disabled]{opacity:0;pointer-events:none}
+  .dots{display:flex;gap:6px;justify-content:center;margin-top:12px}
+  .dots button{width:8px;height:8px;border-radius:50%;border:0;background:var(--sage-light);padding:0;cursor:pointer}
+  .dots button.on{background:var(--forest)}
+  .quote-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:20px}
+  .quote-grid img{border-radius:var(--radius);width:100%}
+  .fg-card{display:flex;gap:16px;align-items:center;background:var(--sand-light);border-radius:var(--radius);padding:16px;margin-bottom:22px;text-decoration:none}
+  .fg-card img{width:84px;border-radius:8px}
+  .fg-card p{color:var(--muted);font-size:.9rem}
+  .fg-card .eyebrow{color:var(--brown);margin-bottom:.2rem}
+  .fg-home{background:var(--sand)}
+  .fg-tiles{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .fg-tile img{border-radius:var(--radius);width:100%;transition:.2s;box-shadow:0 6px 18px rgba(27,48,34,.1)}
+  .fg-tile:hover img{transform:translateY(-4px)}
+  @media (max-width:900px){.guide{grid-template-columns:1fr;gap:24px}.quote-grid,.fg-tiles{grid-template-columns:repeat(2,1fr)}}
+  .guide{scroll-margin-top:80px}

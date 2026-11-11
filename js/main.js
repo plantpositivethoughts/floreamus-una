@@ -109,3 +109,21 @@ if ($('reviews')) {
   .forEach(([f, m, text]) => $(f)?.addEventListener('submit', e => {
     if (!e.target.getAttribute('action')) { e.preventDefault(); $(m).textContent = text; e.target.reset(); }
   }));
+
+/* ---------- Field Guide carousels ---------- */
+document.querySelectorAll('.carousel').forEach(c => {
+  const track = c.querySelector('.track'), slides = track.children, dots = c.querySelector('.dots');
+  const prev = c.querySelector('.prev'), next = c.querySelector('.next');
+  dots.innerHTML = [...slides].map((_, i) => `<button type="button" aria-label="Slide ${i + 1}"></button>`).join('');
+  const go = i => track.scrollTo({ left: i * track.clientWidth, behavior: 'smooth' });
+  const cur = () => Math.round(track.scrollLeft / track.clientWidth);
+  const update = () => {
+    const i = cur();
+    dots.querySelectorAll('button').forEach((d, j) => d.classList.toggle('on', j === i));
+    prev.disabled = i === 0; next.disabled = i === slides.length - 1;
+  };
+  prev.onclick = () => go(cur() - 1); next.onclick = () => go(cur() + 1);
+  dots.querySelectorAll('button').forEach((d, j) => d.onclick = () => go(j));
+  track.addEventListener('scroll', () => requestAnimationFrame(update));
+  update();
+});
