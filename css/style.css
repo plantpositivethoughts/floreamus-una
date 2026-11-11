@@ -335,3 +335,6 @@
   .fg-tile:hover img{transform:translateY(-4px)}
   @media (max-width:900px){.guide{grid-template-columns:1fr;gap:24px}.quote-grid,.fg-tiles{grid-template-columns:repeat(2,1fr)}}
   .guide{scroll-margin-top:80px}
+  .book-grid-wide{grid-template-columns:420px 1fr}
+  .book-cover.wide{max-width:420px}
+  @media (max-width:700px){.book-grid-wide{grid-template-columns:1fr}.book-cover.wide{max-width:100%}}
