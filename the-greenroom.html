@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Greenroom · Floreamus Una</title>
+<meta name="description" content="A–Z houseplant care guides covering watering, light, humidity and feeding, plus seasonal tips and our community gallery.">
+<link rel="icon" href="images/logo.jpg">
+<meta property="og:title" content="The Greenroom · Floreamus Una">
+<meta property="og:description" content="A–Z houseplant care guides covering watering, light, humidity and feeding, plus seasonal tips and our community gallery.">
+<meta property="og:image" content="https://plantpositivethoughts.github.io/floreamus-una/images/share-banner.jpg">
+<meta property="og:url" content="https://plantpositivethoughts.github.io/floreamus-una/the-greenroom.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Cinzel:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="#8DAA91" stroke-width="1.4"/><path d="M9 22 C12 16 16 11 22 8" stroke="#1B3022" stroke-width="1.2" fill="none"/><ellipse cx="13" cy="15" rx="3.2" ry="1.6" transform="rotate(-50 13 15)" fill="#8DAA91"/><ellipse cx="17.5" cy="11" rx="3.2" ry="1.6" transform="rotate(-30 17.5 11)" fill="#8DAA91"/><ellipse cx="16" cy="17" rx="3" ry="1.5" transform="rotate(-10 16 17)" fill="#1B3022" opacity=".7"/></svg>
+      Floreamus Una
+    </a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <ul id="menu">
+      <li><a href="the-sill.html">The Sill</a></li>
+      <li><a href="the-bloomscape.html">The Bloomscape</a></li>
+      <li><a href="the-lab.html">The Lab</a></li>
+      <li><a href="the-bookshelf.html">The Bookshelf</a></li>
+      <li><a href="the-greenroom.html" class="active">The Greenroom</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <img class="section-logo" src="images/the-greenroom.jpg" alt="The Greenroom">
+      <h1>Education &amp; community</h1>
+      <p>Plant positive thoughts. Everything you need to keep your plants, and yourself, thriving.</p>
+    </div>
+  </section>
+  <section class="greenroom">
+    <div class="wrap two-col">
+      <div>
+        <h2 style="font-size:2rem">Plant care guides, A–Z</h2>
+        <p style="color:var(--muted);margin-bottom:16px">Tap a plant to open its guide.</p>
+        <input class="search" id="guide-search" type="search" placeholder="Search plants, e.g. fern or Ficus" aria-label="Search plant care guides">
+        <div id="care-guides"></div>
+      </div>
+      <div>
+        <div class="seasonal" id="seasonal">
+          <p class="eyebrow">Seasonal tips · <span id="season-name"></span></p>
+          <h3>What your plants need right now</h3>
+          <ul id="season-tips"></ul>
+        </div>
+        <div class="app-cta">
+          <h3>The Floreamus Una app</h3>
+          <p>Track watering, get care reminders and check in on your own well-being alongside your plants.</p>
+          <a href="https://plantpositivethoughts.github.io/flourish-together/" class="btn btn-primary btn-sm" id="app-link">Open the app</a>
+        </div>
+        <div class="app-cta" style="background:var(--sand-light)">
+          <h3>Plants &amp; well-being</h3>
+          <p>Why do plants make us feel better? Brett explores the research.</p>
+          <a href="green-prescription.html" class="btn btn-ghost btn-sm">Read The Green Prescription</a>
+        </div>
+      </div>
+    </div>
+    <div class="wrap">
+      <h3 style="margin-top:64px">"Flourish Together" gallery</h3>
+      <p style="color:var(--muted)">Share your plant corner with <strong>#FlourishTogether</strong> for a chance to be featured.</p>
+      <div class="gallery">
+        <div>Your photo here</div><div>Your photo here</div><div>Your photo here</div><div>Your photo here</div>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--sage-light)">Life in full bloom</p>
+      <h2>The Weekly Bloom</h2>
+      <p>Seasonal care tips, early access to new collections and highlights from our community, straight to your inbox.</p>
+      <!-- To collect real sign-ups for free, put your Formspree / MailerLite / Buttondown form URL in action="" -->
+      <form class="nl-form" id="nl-form" action="" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p id="nl-msg" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo">Floreamus Una</div>
+        <p class="foot-tag">GROW · NURTURE · BLOOM</p>
+        <p style="opacity:.75;max-width:360px">Enriching lives and spaces by connecting people with nature through thoughtfully curated indoor plants.</p>
+      </div>
+      <div><h4>Explore</h4><a href="the-sill.html">The Sill</a><a href="the-bloomscape.html">The Bloomscape</a><a href="the-lab.html">The Lab</a><a href="the-bookshelf.html">The Bookshelf</a><a href="the-greenroom.html">The Greenroom</a></div>
+      <div><h4>Connect</h4><a href="our-story.html">Our Story</a><a href="contact.html">Contact &amp; FAQ</a><a href="#newsletter">The Weekly Bloom</a><a href="#">Instagram</a></div>
+    </div>
+    <p class="copy">© <span id="yr"></span> Floreamus Una. Pet-safety notes are a general guide. If a pet eats a plant, contact your vet.</p>
+  </div>
+</footer>
+<script src="js/plants.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

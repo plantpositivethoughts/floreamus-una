@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact &amp; FAQ · Floreamus Una</title>
+<meta name="description" content="Get in touch with Floreamus Una, and find answers to common questions about plants, pets, care and the shop.">
+<link rel="icon" href="images/logo.jpg">
+<meta property="og:title" content="Contact &amp; FAQ · Floreamus Una">
+<meta property="og:description" content="Get in touch with Floreamus Una, and find answers to common questions about plants, pets, care and the shop.">
+<meta property="og:image" content="https://plantpositivethoughts.github.io/floreamus-una/images/share-banner.jpg">
+<meta property="og:url" content="https://plantpositivethoughts.github.io/floreamus-una/contact.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Cinzel:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a href="index.html" class="logo">
+      <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="#8DAA91" stroke-width="1.4"/><path d="M9 22 C12 16 16 11 22 8" stroke="#1B3022" stroke-width="1.2" fill="none"/><ellipse cx="13" cy="15" rx="3.2" ry="1.6" transform="rotate(-50 13 15)" fill="#8DAA91"/><ellipse cx="17.5" cy="11" rx="3.2" ry="1.6" transform="rotate(-30 17.5 11)" fill="#8DAA91"/><ellipse cx="16" cy="17" rx="3" ry="1.5" transform="rotate(-10 16 17)" fill="#1B3022" opacity=".7"/></svg>
+      Floreamus Una
+    </a>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
+    <ul id="menu">
+      <li><a href="the-sill.html">The Sill</a></li>
+      <li><a href="the-bloomscape.html">The Bloomscape</a></li>
+      <li><a href="the-lab.html">The Lab</a></li>
+      <li><a href="the-bookshelf.html">The Bookshelf</a></li>
+      <li><a href="the-greenroom.html">The Greenroom</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <section class="page-hero">
+    <div class="wrap">
+      <h1>Contact &amp; FAQ</h1>
+      <p>Questions about plants, design or the community? We'd love to hear from you.</p>
+    </div>
+  </section>
+  <section>
+    <div class="wrap two-col">
+      <div>
+        <h2 style="font-size:2rem;margin-bottom:1rem">Send us a message</h2>
+        <!-- TO RECEIVE MESSAGES FREE: put a form service address in action="", for example
+             https://formsubmit.co/YOUR-EMAIL (confirm it once from the email they send you)
+             or a free Formspree form URL. Until then, visitors see a "not connected yet" message. -->
+        <form class="contact-form" id="contact-form" action="" method="POST">
+          <label>Your name<input type="text" name="name" required></label>
+          <label>Your email<input type="email" name="email" required></label>
+          <label>What's it about?
+            <select name="topic"><option>Plant care question</option><option>The shop</option><option>Design or business enquiry</option><option>The Bookshelf or community</option><option>Something else</option></select>
+          </label>
+          <label>Message<textarea name="message" required></textarea></label>
+          <button class="btn btn-primary" type="submit" style="justify-self:start">Send message</button>
+          <p id="contact-msg" aria-live="polite"></p>
+        </form>
+      </div>
+      <div class="faq">
+        <h2 style="font-size:2rem;margin-bottom:1rem">Frequently asked questions</h2>
+        <details><summary>When can I buy plants?</summary><p>We're preparing our first collections now. Sign up to The Weekly Bloom at the bottom of this page and you'll be the first to know when The Sill opens.</p></details>
+        <details><summary>Do you deliver?</summary><p>Delivery details will be shared when the shop opens. Sign up to our newsletter for updates.</p></details>
+        <details><summary>Which plants are safe for cats and dogs?</summary><p>Every plant in The Sill is labelled. Use the "Pet-friendly" filter to see only non-toxic plants. Our labels are a general guide: if your pet eats any plant and seems unwell, contact your vet straight away.</p></details>
+        <details><summary>I'm a complete beginner. Where should I start?</summary><p>Try our Plant Finder in The Sill. Three quick questions will suggest plants for your light and lifestyle. Snake Plants, ZZ Plants, Spider Plants and Cast Iron Plants are all very forgiving.</p></details>
+        <details><summary>How often should I water my plants?</summary><p>There's no single rule: it depends on the plant, the light and the season. Most houseplants prefer the top of the soil to dry out a little between waterings, and need less water in winter. Each plant's care guide in The Greenroom has specific advice.</p></details>
+        <details><summary>Why are my plant's leaves turning yellow?</summary><p>The most common cause is overwatering. Check that the pot drains freely and let the soil dry out more between waterings. Too little light or a cold draught can also cause yellowing.</p></details>
+        <details><summary>How do I join the book discussions?</summary><p>Head to The Bookshelf and sign in to the discussion area to share reviews and reply to others.</p></details>
+        <details><summary>What is the Floreamus Una app?</summary><p>It's our free plant-care and well-being app. It helps you track watering, get reminders and check in on how you're feeling. You'll find the link in The Greenroom.</p></details>
+        <details><summary>Do you work with interior designers or businesses?</summary><p>We'd love to hear from you. Choose "Design or business enquiry" in the form above and tell us about your project.</p></details>
+      </div>
+    </div>
+  </section>
+
+  <section id="newsletter" class="newsletter">
+    <div class="wrap">
+      <p class="eyebrow" style="color:var(--sage-light)">Life in full bloom</p>
+      <h2>The Weekly Bloom</h2>
+      <p>Seasonal care tips, early access to new collections and highlights from our community, straight to your inbox.</p>
+      <!-- To collect real sign-ups for free, put your Formspree / MailerLite / Buttondown form URL in action="" -->
+      <form class="nl-form" id="nl-form" action="" method="POST">
+        <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+      <p id="nl-msg" aria-live="polite"></p>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <div>
+        <div class="logo">Floreamus Una</div>
+        <p class="foot-tag">GROW · NURTURE · BLOOM</p>
+        <p style="opacity:.75;max-width:360px">Enriching lives and spaces by connecting people with nature through thoughtfully curated indoor plants.</p>
+      </div>
+      <div><h4>Explore</h4><a href="the-sill.html">The Sill</a><a href="the-bloomscape.html">The Bloomscape</a><a href="the-lab.html">The Lab</a><a href="the-bookshelf.html">The Bookshelf</a><a href="the-greenroom.html">The Greenroom</a></div>
+      <div><h4>Connect</h4><a href="our-story.html">Our Story</a><a href="contact.html">Contact &amp; FAQ</a><a href="#newsletter">The Weekly Bloom</a><a href="#">Instagram</a></div>
+    </div>
+    <p class="copy">© <span id="yr"></span> Floreamus Una. Pet-safety notes are a general guide. If a pet eats a plant, contact your vet.</p>
+  </div>
+</footer>
+<script src="js/plants.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

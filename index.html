@@ -4,555 +4,108 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Floreamus Una — Let Us Flourish Together</title>
+<meta name="description" content="Floreamus Una: thoughtfully curated indoor plants, biophilic design, plant-care guides and a community to grow with. Let us flourish together.">
 <link rel="icon" href="images/logo.jpg">
 <meta property="og:title" content="Floreamus Una — Let Us Flourish Together">
-<meta property="og:description" content="Thoughtfully curated indoor plants, biophilic design and plant-care education.">
+<meta property="og:description" content="Floreamus Una: thoughtfully curated indoor plants, biophilic design, plant-care guides and a community to grow with. Let us flourish together.">
 <meta property="og:image" content="https://plantpositivethoughts.github.io/floreamus-una/images/share-banner.jpg">
 <meta property="og:url" content="https://plantpositivethoughts.github.io/floreamus-una/">
-<meta name="description" content="Floreamus Una: easy-care plants, curated collections, biophilic design and plant-care education. Let us flourish together.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,500&family=Cinzel:wght@400;500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  :root{
-    /* Brand palette: Deep Forest Green #1B3022, Sage Green #8DAA91, Warm Cream #F5F2ED, Earthy Brown #6B4E3D */
-    --forest:#1B3022; --sage:#8DAA91; --cream:#F5F2ED; --brown:#6B4E3D;
-    --sage-dark:#1B3022; --sage-light:#DCE6DD;
-    --terracotta:#6B4E3D; --terracotta-dark:#523B2E;
-    --sand:#E9E3D8; --sand-light:#F5F2ED;
-    --ink:#1B3022; --muted:#5F665F; --white:#FFFFFF;
-    --serif:"Cormorant Garamond", Georgia, "Times New Roman", serif;
-    --wordmark:"Cinzel", "Cormorant Garamond", serif;
-    --sans:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-    --radius:14px; --max:1140px;
-  }
-  *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--sand-light);line-height:1.65;font-size:16px}
-  img,svg{display:block;max-width:100%}
-  a{color:inherit}
-  h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.15;color:var(--ink)}
-  h1{font-size:clamp(2.6rem,6vw,4.4rem)}
-  h2{font-size:clamp(2rem,4vw,2.9rem);margin-bottom:.4rem}
-  h3{font-size:1.45rem;margin-bottom:.3rem}
-  .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
-  section{padding:88px 0}
-  .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--terracotta);font-weight:600;margin-bottom:.6rem}
-  .lede{color:var(--muted);max-width:640px;font-size:1.05rem;margin-bottom:2.4rem}
-  .btn{display:inline-block;padding:13px 26px;border-radius:999px;font-weight:600;font-size:.95rem;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:.2s;font-family:var(--sans)}
-  .btn-primary{background:var(--forest);color:var(--cream)}
-  .btn-primary:hover{background:var(--brown)}
-  .finder .btn-primary,.room .btn-primary{background:var(--sage);color:var(--forest)}
-  .finder .btn-primary:hover{background:var(--cream)}
-  .room .btn-primary{background:var(--forest);color:var(--cream)}
-  .btn-ghost{border-color:var(--sage-dark);color:var(--sage-dark);background:transparent}
-  .btn-ghost:hover{background:var(--sage-dark);color:var(--white)}
-  .btn-sm{padding:8px 16px;font-size:.85rem}
-
-  /* Header */
-  header{position:sticky;top:0;z-index:50;background:rgba(248,244,238,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--sand)}
-  .nav{display:flex;align-items:center;justify-content:space-between;height:70px}
-  .logo{font-family:var(--wordmark);font-size:1.15rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;text-decoration:none;display:flex;align-items:center;gap:12px;color:var(--forest)}
-  .logo img{height:44px;width:auto}
-  .nav ul{display:flex;gap:28px;list-style:none}
-  .nav ul a{text-decoration:none;font-size:.92rem;font-weight:500;color:var(--muted)}
-  .nav ul a:hover{color:var(--terracotta)}
-  .menu-btn{display:none;background:none;border:0;font-size:1.6rem;cursor:pointer;color:var(--ink)}
-
-  /* Hero */
-  .hero{padding:56px 0 120px;background:#fff url("images/hero-banner.jpg") center/cover no-repeat;text-align:center;min-height:620px;display:flex;align-items:center}
-  .hero-inner{max-width:620px;margin:0 auto}
-  .hero-logo{width:min(420px,80vw);margin:0 auto;mix-blend-mode:multiply}
-  .hero-inner p{margin:1rem auto 2rem}
-  .hero .hero-actions,.hero .pillars{justify-content:center}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
-  .hero h1 em{color:var(--brown);font-style:italic}
-  .hero p{font-size:1.15rem;color:var(--muted);margin:1.2rem 0 2rem;max-width:520px}
-  .hero-actions{display:flex;gap:14px;flex-wrap:wrap}
-  .pillars{display:flex;gap:26px;margin-top:2.6rem;flex-wrap:wrap}
-  .pillars span{font-size:.85rem;color:var(--sage-dark);font-weight:600;display:flex;align-items:center;gap:8px}
-  .pillars span::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--terracotta)}
-  .hero-art{background:var(--white);border-radius:220px 220px var(--radius) var(--radius);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:28px;box-shadow:0 10px 40px rgba(27,48,34,.08)}
-
-  /* Section tiles */
-  .areas{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:-56px;position:relative}
-  .area{background:var(--white);border-radius:var(--radius);padding:24px;text-decoration:none;box-shadow:0 6px 24px rgba(47,51,43,.06);transition:.2s}
-  .area:hover{transform:translateY(-4px)}
-  .area small{color:var(--terracotta);font-weight:600;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase}
-  .area h3{margin:.3rem 0}
-  .area p{font-size:.9rem;color:var(--muted)}
-
-  /* Section logos (white backgrounds blend into the page colour) */
-  .section-head{display:flex;align-items:center;gap:36px;margin-bottom:2.4rem}
-  .section-logo{width:170px;flex-shrink:0;mix-blend-mode:multiply}
-  .section-head .lede{margin-bottom:0}
-  @media (max-width:640px){.section-head{flex-direction:column;align-items:flex-start;gap:12px}.section-logo{width:140px}}
-
-  /* Shop */
-  .filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:28px}
-  .chip{padding:8px 18px;border-radius:999px;border:1.5px solid var(--sage);background:transparent;color:var(--sage-dark);font-weight:500;cursor:pointer;font-family:var(--sans);font-size:.9rem}
-  .chip.active,.chip:hover{background:var(--sage-dark);border-color:var(--sage-dark);color:var(--white)}
-  .grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:22px}
-  .card{background:var(--white);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column}
-  .card-img{aspect-ratio:1/1;display:flex;align-items:flex-end;justify-content:center;background:var(--sand)}
-  .card-body{padding:18px 20px 22px;display:flex;flex-direction:column;flex:1}
-  .card-body .latin{font-style:italic;color:var(--muted);font-size:.85rem;margin-bottom:.6rem}
-  .tags{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:.9rem}
-  .tag{font-size:.72rem;padding:3px 10px;border-radius:999px;background:var(--sage-light);color:var(--sage-dark);font-weight:600}
-  .tag.warn{background:#EADFD6;color:var(--terracotta-dark)}
-  .card-foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center}
-  .price{font-weight:600}
-
-  /* Finder */
-  .finder{background:var(--forest);color:var(--white);border-radius:24px;padding:48px;margin-top:64px}
-  .finder h2,.finder h3{color:var(--white)}
-  .finder .lede{color:var(--sage-light);margin-bottom:1.6rem}
-  .q{margin-bottom:22px}
-  .q p{font-weight:600;margin-bottom:10px}
-  .opts{display:flex;gap:10px;flex-wrap:wrap}
-  .opt{padding:10px 18px;border-radius:999px;border:1.5px solid var(--sage-light);background:transparent;color:var(--white);cursor:pointer;font-family:var(--sans);font-size:.9rem}
-  .opt.sel{background:var(--sand);color:var(--ink);border-color:var(--sand)}
-  #finder-result{margin-top:26px;background:rgba(255,255,255,.1);border-radius:var(--radius);padding:22px;display:none}
-  #finder-result ul{margin:.6rem 0 0 1.1rem}
-
-  /* Collections */
-  .bloomscape{background:var(--sand)}
-  .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .collection{background:var(--white);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
-  .collection .level{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--sage-dark)}
-  .collection ul{list-style:none;margin:1rem 0 1.6rem;font-size:.92rem;color:var(--muted)}
-  .collection li{padding:6px 0;border-bottom:1px dashed var(--sand)}
-  .collection .btn{margin-top:auto;align-self:flex-start}
-  .room{margin-top:40px;border-radius:24px;overflow:hidden;display:grid;grid-template-columns:1.2fr 1fr;background:var(--white)}
-  .room-art{background:linear-gradient(160deg,var(--sage-light),#BFD0C1);min-height:320px;position:relative}
-  .hotspot{position:absolute;width:26px;height:26px;border-radius:50%;background:var(--terracotta);border:4px solid rgba(255,255,255,.8);cursor:pointer}
-  .hotspot:hover::after{content:attr(data-label);position:absolute;left:30px;top:-4px;white-space:nowrap;background:var(--ink);color:var(--white);font-size:.78rem;padding:4px 10px;border-radius:6px}
-  .room-body{padding:40px}
-
-  /* Lab */
-  .articles{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .article{border-top:3px solid var(--terracotta);padding-top:18px}
-  .article .meta{font-size:.8rem;color:var(--muted);margin-bottom:.4rem}
-  .article p{color:var(--muted);font-size:.93rem;margin-bottom:.8rem}
-  .article a{font-weight:600;color:var(--terracotta);text-decoration:none;font-size:.9rem}
-  .resources{margin-top:48px;background:var(--white);border-radius:var(--radius);padding:32px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
-  .resources ul{list-style:none;display:flex;gap:12px;flex-wrap:wrap}
-  .resources li{background:var(--sand-light);padding:8px 14px;border-radius:8px;font-size:.88rem}
-
-  /* Bookshelf */
-  .bookshelf{background:var(--sand)}
-  .shelf-top{display:grid;grid-template-columns:1fr 1fr;gap:22px}
-  .botm{background:var(--forest);color:var(--cream);border-radius:var(--radius);padding:30px}
-  .botm h3{color:var(--cream)} .botm p{opacity:.85;font-size:.95rem}
-  .how{background:var(--white);border-radius:var(--radius);padding:30px}
-  .how ol{margin:.6rem 0 0 1.2rem;color:var(--muted);font-size:.93rem}
-  .how li{margin-bottom:.4rem}
-  .shelf{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
-  .review{background:var(--white);border-radius:var(--radius);padding:24px}
-  .review .by{font-size:.8rem;color:var(--muted)}
-  .review .leaves{margin:.4rem 0 .6rem;letter-spacing:2px}
-  .review p{color:var(--muted);font-size:.92rem}
-  .discussion{margin-top:40px;background:var(--white);border-radius:var(--radius);padding:30px}
-  .placeholder{border:2px dashed var(--sage);border-radius:var(--radius);padding:28px;text-align:center;color:var(--muted)}
-
-  /* Greenroom */
-  .greenroom{background:var(--white)}
-  .two-col{display:grid;grid-template-columns:1.2fr 1fr;gap:48px}
-  details{border-bottom:1px solid var(--sand);padding:16px 0}
-  summary{cursor:pointer;font-family:var(--serif);font-size:1.3rem;font-weight:600;list-style:none;display:flex;justify-content:space-between}
-  summary::after{content:"+";color:var(--terracotta)}
-  details[open] summary::after{content:"–"}
-  details dl{display:grid;grid-template-columns:110px 1fr;gap:6px 14px;margin-top:12px;font-size:.92rem}
-  details dt{font-weight:600;color:var(--sage-dark)}
-  details dd{color:var(--muted)}
-  .seasonal{background:var(--sand-light);border-radius:var(--radius);padding:28px}
-  .seasonal h3{margin-bottom:.8rem}
-  .seasonal li{margin:0 0 .7rem 1.1rem;color:var(--muted);font-size:.94rem}
-  .app-cta{margin-top:22px;background:var(--sage-light);border-radius:var(--radius);padding:24px}
-  .app-cta p{color:var(--muted);font-size:.93rem;margin:.3rem 0 1rem}
-  .gallery{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:56px}
-  .gallery div{aspect-ratio:1/1;border-radius:var(--radius);background:var(--sand);display:flex;align-items:center;justify-content:center;color:var(--muted);font-size:.85rem;text-align:center;padding:12px}
-
-  /* Story */
-  .story{background:var(--sand)}
-  .story-grid{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:start}
-  .story p.body{color:var(--muted);margin-bottom:1rem}
-  .founders{display:flex;gap:10px;flex-wrap:wrap;margin-top:1.2rem}
-  .founders span{background:var(--white);padding:8px 16px;border-radius:999px;font-size:.88rem;font-weight:500}
-  .mission{background:var(--forest);color:var(--cream);border-radius:var(--radius);padding:32px;margin-bottom:22px}
-  .mission h3{color:var(--cream)}
-  .mission p{opacity:.85;font-size:.98rem}
-  .values{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-  .value{background:var(--white);border-radius:var(--radius);padding:18px 20px}
-  .value strong{font-family:var(--serif);font-size:1.25rem;display:block;color:var(--forest)}
-  .value span{font-size:.88rem;color:var(--muted)}
-  .value:last-child{grid-column:1/-1}
-
-  /* Newsletter */
-  .newsletter{background:var(--forest);color:var(--white);text-align:center}
-  .newsletter h2{color:var(--white)}
-  .newsletter p{max-width:560px;margin:0 auto 1.8rem;opacity:.9}
-  .nl-form{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-  .nl-form input{padding:13px 20px;border-radius:999px;border:0;min-width:280px;font-family:var(--sans);font-size:.95rem}
-  .nl-form .btn{background:var(--sage);color:var(--forest)}
-  .nl-form .btn:hover{background:var(--cream)}
-  #nl-msg{margin-top:14px;font-weight:500}
-
-  footer{background:#14241A;color:var(--cream);padding:56px 0 32px;font-size:.9rem}
-  .foot{display:grid;grid-template-columns:2fr 1fr 1fr;gap:32px}
-  footer .logo{color:var(--cream);margin-bottom:.4rem}
-  .foot-tag{font-family:var(--wordmark);letter-spacing:.3em;font-size:.72rem;color:var(--sage);margin-bottom:.9rem}
-  footer a{text-decoration:none;opacity:.8;display:block;margin:.3rem 0}
-  footer a:hover{opacity:1}
-  footer h4{font-family:var(--sans);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;margin-bottom:.6rem;color:var(--sage)}
-  .copy{margin-top:40px;padding-top:20px;border-top:1px solid #33463A;opacity:.6;font-size:.82rem}
-
-  @media (max-width:900px){
-    .hero-grid,.two-col,.room,.story-grid,.values{grid-template-columns:1fr}
-    .hero{min-height:520px;background-size:auto 100%}
-    .areas{grid-template-columns:repeat(2,1fr);margin-top:40px}
-    .collections,.articles,.shelf,.shelf-top{grid-template-columns:1fr}
-    .gallery{grid-template-columns:repeat(2,1fr)}
-    .foot{grid-template-columns:1fr}
-    .finder{padding:32px 22px}
-    .nav ul{display:none;position:absolute;top:70px;left:0;right:0;background:var(--sand-light);flex-direction:column;padding:20px 24px;gap:16px;border-bottom:1px solid var(--sand)}
-    .nav ul.open{display:flex}
-    .menu-btn{display:block}
-    section{padding:64px 0}
-  }
-</style>
+<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-
-<!-- Reusable plant illustrations -->
-<svg width="0" height="0" style="position:absolute" aria-hidden="true">
-  <defs>
-    <symbol id="pot" viewBox="0 0 200 220">
-      <path d="M58 150h84l-10 66H68z" fill="#6B4E3D"/>
-      <rect x="52" y="140" width="96" height="16" rx="4" fill="#523B2E"/>
-    </symbol>
-    <symbol id="snake" viewBox="0 0 200 220">
-      <path d="M100 145 C92 100 88 60 96 18 C104 60 108 100 104 145Z" fill="#1B3022"/>
-      <path d="M90 145 C70 110 60 75 62 40 C80 75 92 110 96 145Z" fill="#8DAA91"/>
-      <path d="M110 145 C128 112 140 80 142 48 C122 80 112 112 104 145Z" fill="#4E6B55"/>
-      <use href="#pot"/>
-    </symbol>
-    <symbol id="monstera" viewBox="0 0 200 220">
-      <path d="M100 145 C60 120 30 90 40 55 C70 50 95 80 100 145Z" fill="#4E6B55"/>
-      <path d="M100 145 C140 115 170 90 162 50 C130 48 106 80 100 145Z" fill="#1B3022"/>
-      <path d="M100 145 C92 100 90 60 100 25 C112 60 110 100 100 145Z" fill="#8DAA91"/>
-      <use href="#pot"/>
-    </symbol>
-    <symbol id="trailing" viewBox="0 0 200 220">
-      <path d="M100 140 C80 110 50 120 40 175" stroke="#1B3022" stroke-width="4" fill="none"/>
-      <path d="M100 140 C125 105 158 120 165 182" stroke="#1B3022" stroke-width="4" fill="none"/>
-      <g fill="#8DAA91"><ellipse cx="48" cy="150" rx="12" ry="7"/><ellipse cx="42" cy="172" rx="11" ry="6"/><ellipse cx="70" cy="122" rx="13" ry="7"/><ellipse cx="150" cy="128" rx="13" ry="7"/><ellipse cx="162" cy="155" rx="12" ry="6"/><ellipse cx="166" cy="178" rx="11" ry="6"/><ellipse cx="100" cy="115" rx="14" ry="8"/></g>
-      <use href="#pot"/>
-    </symbol>
-    <symbol id="tall" viewBox="0 0 200 220">
-      <rect x="97" y="40" width="6" height="105" fill="#1B3022"/>
-      <g fill="#4E6B55"><ellipse cx="80" cy="60" rx="22" ry="15"/><ellipse cx="122" cy="48" rx="22" ry="15"/><ellipse cx="78" cy="98" rx="22" ry="15"/><ellipse cx="124" cy="88" rx="22" ry="15"/><ellipse cx="100" cy="28" rx="18" ry="13"/></g>
-      <use href="#pot"/>
-    </symbol>
-  </defs>
-</svg>
-
 <header>
   <div class="wrap nav">
-    <a href="#top" class="logo">
+    <a href="index.html" class="logo">
       <svg width="30" height="30" viewBox="0 0 30 30" aria-hidden="true"><circle cx="15" cy="15" r="12" fill="none" stroke="#8DAA91" stroke-width="1.4"/><path d="M9 22 C12 16 16 11 22 8" stroke="#1B3022" stroke-width="1.2" fill="none"/><ellipse cx="13" cy="15" rx="3.2" ry="1.6" transform="rotate(-50 13 15)" fill="#8DAA91"/><ellipse cx="17.5" cy="11" rx="3.2" ry="1.6" transform="rotate(-30 17.5 11)" fill="#8DAA91"/><ellipse cx="16" cy="17" rx="3" ry="1.5" transform="rotate(-10 16 17)" fill="#1B3022" opacity=".7"/></svg>
       Floreamus Una
     </a>
-    <button class="menu-btn" aria-label="Open menu" onclick="document.getElementById('menu').classList.toggle('open')">☰</button>
+    <button class="menu-btn" aria-label="Open menu">☰</button>
     <ul id="menu">
-      <li><a href="#the-sill">The Sill</a></li>
-      <li><a href="#the-bloomscape">The Bloomscape</a></li>
-      <li><a href="#the-lab">The Lab</a></li>
-      <li><a href="#the-bookshelf">The Bookshelf</a></li>
-      <li><a href="#the-greenroom">The Greenroom</a></li>
-      <li><a href="#our-story">Our Story</a></li>
+      <li><a href="the-sill.html">The Sill</a></li>
+      <li><a href="the-bloomscape.html">The Bloomscape</a></li>
+      <li><a href="the-lab.html">The Lab</a></li>
+      <li><a href="the-bookshelf.html">The Bookshelf</a></li>
+      <li><a href="the-greenroom.html">The Greenroom</a></li>
+      <li><a href="our-story.html">Our Story</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
   </div>
 </header>
 
-<main id="top">
-  <!-- HERO -->
+<main>
   <section class="hero">
     <div class="wrap hero-inner">
       <h1><img class="hero-logo" src="images/logo.jpg" alt="Floreamus Una — Let us flourish together"></h1>
       <p class="eyebrow" style="margin-top:.6rem">Cultivating well-being, elevating design</p>
       <p>Thoughtfully curated indoor plants that bring calm to your home, beauty to your rooms and a community to grow with.</p>
       <div class="hero-actions">
-        <a href="#finder" class="btn btn-primary">Find your plant</a>
-        <a href="#the-greenroom" class="btn btn-ghost">Explore plant care</a>
+        <a href="the-sill.html#finder" class="btn btn-primary">Find your plant</a>
+        <a href="the-greenroom.html" class="btn btn-ghost">Explore plant care</a>
       </div>
       <div class="pillars"><span>Grow</span><span>Nurture</span><span>Bloom</span></div>
     </div>
   </section>
 
   <div class="wrap">
-    <div class="areas">
-      <a class="area" href="#the-sill"><small>Shop</small><h3>The Sill</h3><p>Easy-care and pet-friendly plants for every home.</p></a>
-      <a class="area" href="#the-bloomscape"><small>Collections</small><h3>The Bloomscape</h3><p>Curated sets for beginners through to experts.</p></a>
-      <a class="area" href="#the-lab"><small>Design</small><h3>The Lab</h3><p>Biophilic design ideas, guides and DIY projects.</p></a>
-      <a class="area" href="#the-greenroom"><small>Learn</small><h3>The Greenroom</h3><p>Care guides, seasonal tips and our community.</p></a>
+    <div class="areas areas-5">
+      <a class="area" href="the-sill.html"><img src="images/the-sill.jpg" alt=""><small>Shop</small><h3>The Sill</h3><p>Easy-care and pet-friendly plants for every home.</p></a>
+      <a class="area" href="the-bloomscape.html"><img src="images/the-bloomscape.jpg" alt=""><small>Collections</small><h3>The Bloomscape</h3><p>Curated sets, from beginner bundles to expert suites.</p></a>
+      <a class="area" href="the-lab.html"><img src="images/the-lab.jpg" alt=""><small>Design</small><h3>The Lab</h3><p>Articles, room ideas and DIY projects.</p></a>
+      <a class="area" href="the-bookshelf.html"><img src="images/the-bookshelf.jpg" alt=""><small>Community</small><h3>The Bookshelf</h3><p>Book reviews and a reading community.</p></a>
+      <a class="area" href="the-greenroom.html"><img src="images/the-greenroom.jpg" alt=""><small>Learn</small><h3>The Greenroom</h3><p>Care guides, seasonal tips and our gallery.</p></a>
     </div>
   </div>
 
-  <!-- THE SILL -->
-  <section id="the-sill">
+  <section>
     <div class="wrap">
-      <div class="section-head">
-        <img class="section-logo" src="images/the-sill.jpg" alt="The Sill">
-        <div><h2>Easy-care plants for every home</h2>
-        <p class="lede">New to plants? Start here. Every plant is labelled for care level and whether it's safe around pets.</p></div>
-      </div>
-      <div class="filters" role="group" aria-label="Filter plants">
-        <button class="chip active" data-filter="all">All plants</button>
-        <button class="chip" data-filter="pet">Pet-friendly</button>
-        <button class="chip" data-filter="easy">Easy-care</button>
-        <button class="chip" data-filter="low">Low light</button>
-      </div>
-      <div class="grid" id="plant-grid"></div>
-
-      <!-- PLANT FINDER -->
-      <div class="finder" id="finder">
-        <p class="eyebrow" style="color:var(--sage)">Plant Finder</p>
-        <h2>Which plant suits you?</h2>
-        <p class="lede">Answer three quick questions and we'll suggest plants that will thrive in your space.</p>
-        <div class="q" data-q="light"><p>1. How much light does your spot get?</p>
-          <div class="opts"><button class="opt" data-v="low">Low / shady</button><button class="opt" data-v="medium">Bright, indirect</button><button class="opt" data-v="high">Lots of sun</button></div></div>
-        <div class="q" data-q="pets"><p>2. Do you share your home with cats or dogs?</p>
-          <div class="opts"><button class="opt" data-v="yes">Yes</button><button class="opt" data-v="no">No</button></div></div>
-        <div class="q" data-q="time"><p>3. How much time can you give your plants?</p>
-          <div class="opts"><button class="opt" data-v="little">I forget to water</button><button class="opt" data-v="some">A little each week</button><button class="opt" data-v="lots">I love fussing over them</button></div></div>
-        <button class="btn btn-primary" id="finder-go">Show my plants</button>
-        <div id="finder-result" aria-live="polite"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE BLOOMSCAPE -->
-  <section id="the-bloomscape" class="bloomscape">
-    <div class="wrap">
-      <div class="section-head">
-        <img class="section-logo" src="images/the-bloomscape.jpg" alt="The Bloomscape">
-        <div><h2>Curated collections</h2>
-        <p class="lede">Thoughtfully put-together sets, potted and styled so they're ready to display the day they arrive.</p></div>
-      </div>
-      <div class="collections">
-        <div class="collection">
-          <span class="level">For beginners</span><h3>The Beginner Bundle</h3>
-          <p style="color:var(--muted);font-size:.93rem">Three forgiving plants, pre-potted and ready for a shelf.</p>
-          <ul><li>Snake Plant</li><li>ZZ Plant</li><li>Spider Plant</li></ul>
-          <a href="#newsletter" class="btn btn-ghost btn-sm">Notify me at launch</a>
-        </div>
-        <div class="collection">
-          <span class="level">For pet homes</span><h3>The Companion Set</h3>
-          <p style="color:var(--muted);font-size:.93rem">Non-toxic greenery for homes with curious cats and dogs.</p>
-          <ul><li>Spider Plant</li><li>Calathea</li><li>Boston Fern</li></ul>
-          <a href="#newsletter" class="btn btn-ghost btn-sm">Notify me at launch</a>
-        </div>
-        <div class="collection">
-          <span class="level">For enthusiasts</span><h3>The Expert Suite</h3>
-          <p style="color:var(--muted);font-size:.93rem">Statement plants that reward a little extra attention.</p>
-          <ul><li>Alocasia</li><li>Fiddle Leaf Fig</li><li>Calathea (rare varieties)</li></ul>
-          <a href="#newsletter" class="btn btn-ghost btn-sm">Notify me at launch</a>
-        </div>
-      </div>
-
-      <div class="room">
-        <div class="room-art" aria-label="Illustrated living room with plants">
-          <svg viewBox="0 0 400 300" style="position:absolute;inset:0;width:100%;height:100%" preserveAspectRatio="xMidYMax slice">
-            <rect x="0" y="230" width="400" height="70" fill="#E2DACC"/>
-            <rect x="150" y="170" width="170" height="60" rx="10" fill="#EFE6D8"/>
-            <rect x="140" y="150" width="40" height="80" rx="10" fill="#E2DACC"/>
-            <rect x="290" y="150" width="40" height="80" rx="10" fill="#E2DACC"/>
-            <svg x="20" y="80" width="120" height="160"><use href="#tall"/></svg>
-            <svg x="320" y="140" width="80" height="100"><use href="#trailing"/></svg>
-            <svg x="210" y="110" width="60" height="70"><use href="#snake"/></svg>
-          </svg>
-          <span class="hotspot" style="left:17%;top:42%" data-label="Fiddle Leaf Fig"></span>
-          <span class="hotspot" style="left:58%;top:42%" data-label="Snake Plant"></span>
-          <span class="hotspot" style="left:88%;top:55%" data-label="Spider Plant"></span>
-        </div>
-        <div class="room-body">
-          <p class="eyebrow">Shop the Room</p>
-          <h3>The Calm Living Room</h3>
-          <p style="color:var(--muted);margin:.6rem 0 1.4rem">A tall statement plant, a sculptural snake plant and a trailing spider plant. Hover over the dots to see each plant.</p>
-          <a href="#the-sill" class="btn btn-primary btn-sm">See these plants</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- THE LAB -->
-  <section id="the-lab">
-    <div class="wrap">
-      <div class="section-head">
-        <img class="section-logo" src="images/the-lab.jpg" alt="The Lab">
-        <div><h2>Where nature meets design</h2>
-        <p class="lede">Plants aren't just placed in rooms; they belong in the fabric of a space. Ideas, guides and projects for the art of biophilic living.</p></div>
-      </div>
+      <p class="eyebrow">From The Lab</p>
+      <h2>Where nature meets design</h2>
+      <p class="lede">Ideas, research and projects for the art of biophilic living.</p>
       <div class="articles">
         <article class="article">
+          <p class="meta">Design</p>
+          <h3><a href="cultivating-calm.html" style="text-decoration:none;color:inherit">Cultivating Calm: Designing with the Aesthetics of Plants</a></h3>
+          <p>From Urban Jungle to Japandi: how to weave plants into the very fabric of a room, with a guide to choosing plants and planters for each style.</p>
+          <a href="cultivating-calm.html">Read the article →</a>
+        </article>
+        <article class="article">
+          <p class="meta">Wellness</p>
+          <h3><a href="green-prescription.html" style="text-decoration:none;color:inherit">The Green Prescription: How Houseplants Enhance Mental and Physical Wellness</a></h3>
+          <p>What the research says about plants, stress, mood and the air we breathe indoors.</p>
+          <a href="green-prescription.html">Read the article →</a>
+        </article>
+        <article class="article">
           <p class="meta">Biophilic Design 101</p>
-          <h3>The 14 patterns of biophilic design</h3>
-          <p>From natural light to living greenery: a plain-English tour of the patterns designers use to make spaces feel restorative.</p>
-          <a href="#">Read the guide →</a>
-        </article>
-        <article class="article">
-          <p class="meta">Designer Spotlight</p>
-          <h3>Small flat, big green</h3>
-          <p>How a designer layered plants, texture and light to make a compact space feel calm and open.</p>
-          <a href="#">Read the story →</a>
-        </article>
-        <article class="article">
-          <p class="meta">Creative Labs</p>
-          <h3>DIY: a hanging plant shelf</h3>
-          <p>A weekend project using simple materials to give trailing plants a home near the window.</p>
-          <a href="#">Watch the tutorial →</a>
+          <h3><a href="biophilic-design-14-patterns.html" style="text-decoration:none;color:inherit">The 14 Patterns of Biophilic Design</a></h3>
+          <p>A plain-English tour of the patterns designers use to make spaces feel restorative, with an easy way to try each one at home.</p>
+          <a href="biophilic-design-14-patterns.html">Read the article →</a>
         </article>
       </div>
-      <div class="resources">
-        <div><h3>Resource Centre</h3><p style="color:var(--muted);font-size:.93rem">Free downloads to help you plan your space.</p></div>
-        <ul><li>📐 Room planning checklist</li><li>🎨 Biophilic mood board</li><li>☀️ Light-mapping guide</li></ul>
-      </div>
+      <p style="margin-top:28px"><a class="btn btn-ghost" href="the-lab.html">See all articles</a></p>
     </div>
   </section>
 
-  <!-- THE BOOKSHELF -->
-  <section id="the-bookshelf" class="bookshelf">
-    <div class="wrap">
-      <div class="section-head">
-        <img class="section-logo" src="images/the-bookshelf.jpg" alt="The Bookshelf">
-        <div><h2>What are you reading?</h2>
-        <p class="lede">Our community book corner. Share reviews, recommend your favourites and talk about the books you're reading right now, about plants or anything else.</p></div>
-      </div>
-
-      <div class="shelf-top">
-        <div class="botm">
-          <p class="eyebrow" style="color:var(--sage)">Book of the month</p>
-          <h3>To be announced</h3>
-          <p>Each month we'll pick one book to read together, then talk it over here. Suggest a title in the discussion below.</p>
-        </div>
-        <div class="how">
-          <h3>How to join in</h3>
-          <ol>
-            <li>Sign in to the discussion below.</li>
-            <li>Post the book's title and author, and what you thought.</li>
-            <li>Give it a rating out of five leaves 🌿🌿🌿🌿🌿</li>
-            <li>Reply to others: kind, honest and no spoilers without a warning.</li>
-          </ol>
-        </div>
-      </div>
-
-      <h3 style="margin:40px 0 16px">Recent reviews</h3>
-      <div class="shelf" id="reviews"></div>
-
-      <div class="discussion">
-        <h3>Join the discussion</h3>
-        <p style="color:var(--muted);font-size:.93rem;margin-bottom:18px">Comments are powered by giscus, which is free.</p>
-        <div class="giscus"></div>
-        <div id="giscus-placeholder" class="placeholder">💬 The book discussion opens soon.</div>
-        <!-- TO SWITCH ON DISCUSSIONS (free):
-             1. In your GitHub repo: Settings → General → Features → tick "Discussions".
-             2. Install the giscus app: https://github.com/apps/giscus
-             3. Go to https://giscus.app, enter your repo, pick a category (e.g. "General"),
-                and copy the data-repo-id and data-category-id it gives you into the script below.
-             4. Delete the comment markers before and after the script (the lines starting with the less-than sign and ending in two dashes), and delete the placeholder div above.
-        <script src="https://giscus.app/client.js"
-          data-repo="YOUR-GITHUB-NAME/YOUR-REPO"
-          data-repo-id="PASTE-REPO-ID"
-          data-category="General"
-          data-category-id="PASTE-CATEGORY-ID"
-          data-mapping="specific"
-          data-term="The Bookshelf"
-          data-reactions-enabled="1"
-          data-input-position="top"
-          data-theme="light"
-          data-lang="en"
-          crossorigin="anonymous" async></script>
-        -->
-      </div>
-    </div>
-  </section>
-
-  <!-- THE GREENROOM -->
-  <section id="the-greenroom" class="greenroom">
-    <div class="wrap">
-      <div class="section-head">
-        <img class="section-logo" src="images/the-greenroom.jpg" alt="The Greenroom">
-        <div><h2>Education &amp; community</h2>
-        <p class="lede">Plant positive thoughts. Everything you need to keep your plants, and yourself, thriving.</p></div>
-      </div>
-      <div class="two-col">
-        <div>
-          <h3 style="margin-bottom:.6rem">Plant care guides</h3>
-          <div id="care-guides"></div>
-        </div>
-        <div>
-          <div class="seasonal">
-            <p class="eyebrow">Seasonal tips · Winter</p>
-            <h3>Helping plants through the cold months</h3>
-            <ul>
-              <li><strong>Water less.</strong> Most houseplants grow slowly in winter, so let the soil dry out more between waterings.</li>
-              <li><strong>Watch the radiators.</strong> Dry heat lowers humidity. Group plants together or use a pebble tray.</li>
-              <li><strong>Chase the light.</strong> Move plants closer to windows, and wipe dust off leaves so they catch more light.</li>
-              <li><strong>Check for pests.</strong> Spider mites love warm, dry rooms. Look under the leaves every couple of weeks.</li>
-            </ul>
-          </div>
-          <div class="app-cta">
-            <h3>The Floreamus Una app</h3>
-            <p>Track watering, get care reminders and check in on your own wellbeing alongside your plants.</p>
-            <a href="https://plantpositivethoughts.github.io/flourish-together/" class="btn btn-primary btn-sm" id="app-link">Open the app</a>
-          </div>
-        </div>
-      </div>
-
-      <h3 style="margin-top:64px">"Flourish Together" gallery</h3>
-      <p style="color:var(--muted)">Share your plant corner with <strong>#FlourishTogether</strong> for a chance to be featured.</p>
-      <div class="gallery">
-        <div>Your photo here</div><div>Your photo here</div><div>Your photo here</div><div>Your photo here</div>
-      </div>
-    </div>
-  </section>
-
-  <!-- OUR STORY -->
-  <section id="our-story" class="story">
-    <div class="wrap story-grid">
+  <section class="story">
+    <div class="wrap teaser">
       <div>
         <p class="eyebrow">Our story</p>
         <h2>Grown from a quiet moment</h2>
-        <p class="body">Floreamus Una began during the quiet of the 2020 lockdowns. Like many people, Brett found comfort in the natural world and a new passion for indoor plants.</p>
-        <p class="body">What started as a hobby became a creative exploration: using architectural foliage and lush textures as design elements, until his home became a sanctuary of biophilic beauty.</p>
-        <p class="body">Soon it was a family affair. Brett's partner Lydia and his sister Nicola shared the vision, and together they founded Floreamus Una, knowing that growing and nurturing plants is about far more than looks. It's good for the mind, too.</p>
-        <div class="founders"><span>Brett</span><span>Lydia</span><span>Nicola</span></div>
+        <p class="lede" style="margin-bottom:1.6rem">Floreamus Una began in the stillness of the 2020 lockdowns, when a hobby became a passion, and then a family venture devoted to helping people and plants flourish together.</p>
+        <a class="btn btn-primary" href="our-story.html">Read our story</a>
       </div>
-      <div>
-        <div class="mission">
-          <p class="eyebrow" style="color:var(--sage)">Our mission</p>
-          <h3>Connecting people with nature</h3>
-          <p>We aim to enrich lives and spaces through thoughtfully curated indoor plants, fostering a sense of wellness, calm and vibrant living.</p>
-        </div>
-        <div class="values">
-          <div class="value"><strong>Wellness</strong><span>The physical and mental well-being plants bring.</span></div>
-          <div class="value"><strong>Aesthetics</strong><span>Elegant design, natural beauty, sophisticated living.</span></div>
-          <div class="value"><strong>Nurturing</strong><span>Growth, care and community for plants and people.</span></div>
-          <div class="value"><strong>Integrity</strong><span>Ethical sourcing, sustainable practice, transparency.</span></div>
-          <div class="value"><strong>Inspiration</strong><span>Empowering you to create beautiful, life-affirming spaces.</span></div>
-        </div>
-      </div>
+      <img src="images/logo.jpg" alt="" style="margin:0 auto">
     </div>
   </section>
 
-  <!-- NEWSLETTER -->
   <section id="newsletter" class="newsletter">
     <div class="wrap">
       <p class="eyebrow" style="color:var(--sage-light)">Life in full bloom</p>
       <h2>The Weekly Bloom</h2>
       <p>Seasonal care tips, early access to new collections and highlights from our community, straight to your inbox.</p>
-      <!-- To collect real sign-ups for free, replace the action below with your Formspree / MailerLite / Buttondown form URL -->
+      <!-- To collect real sign-ups for free, put your Formspree / MailerLite / Buttondown form URL in action="" -->
       <form class="nl-form" id="nl-form" action="" method="POST">
         <input type="email" name="email" placeholder="Your email address" required aria-label="Email address">
         <button class="btn" type="submit">Subscribe</button>
@@ -570,109 +123,13 @@
         <p class="foot-tag">GROW · NURTURE · BLOOM</p>
         <p style="opacity:.75;max-width:360px">Enriching lives and spaces by connecting people with nature through thoughtfully curated indoor plants.</p>
       </div>
-      <div><h4>Explore</h4><a href="#the-sill">The Sill</a><a href="#the-bloomscape">The Bloomscape</a><a href="#the-lab">The Lab</a><a href="#the-bookshelf">The Bookshelf</a><a href="#the-greenroom">The Greenroom</a></div>
-      <div><h4>Connect</h4><a href="#our-story">Our Story</a><a href="#newsletter">The Weekly Bloom</a><a href="#">Instagram</a><a href="#">Contact</a></div>
+      <div><h4>Explore</h4><a href="the-sill.html">The Sill</a><a href="the-bloomscape.html">The Bloomscape</a><a href="the-lab.html">The Lab</a><a href="the-bookshelf.html">The Bookshelf</a><a href="the-greenroom.html">The Greenroom</a></div>
+      <div><h4>Connect</h4><a href="our-story.html">Our Story</a><a href="contact.html">Contact &amp; FAQ</a><a href="#newsletter">The Weekly Bloom</a><a href="#">Instagram</a></div>
     </div>
     <p class="copy">© <span id="yr"></span> Floreamus Una. Pet-safety notes are a general guide. If a pet eats a plant, contact your vet.</p>
   </div>
 </footer>
-
-<script>
-/* ===== EDIT YOUR PLANTS HERE =====
-   price: put a number like 18 when you're ready to sell; leave null to show "Coming soon".
-   buyUrl: paste a payment link (e.g. Stripe Payment Link) when you have one. */
-const PLANTS = [
-  {name:"Spider Plant", latin:"Chlorophytum comosum", art:"trailing", pet:true,  easy:true,  light:["low","medium"], care:"little", price:null, buyUrl:""},
-  {name:"Calathea", latin:"Calathea spp.", art:"monstera", pet:true,  easy:false, light:["low","medium"], care:"lots", price:null, buyUrl:""},
-  {name:"Boston Fern", latin:"Nephrolepis exaltata", art:"trailing", pet:true, easy:false, light:["medium"], care:"some", price:null, buyUrl:""},
-  {name:"Parlour Palm", latin:"Chamaedorea elegans", art:"tall", pet:true, easy:true, light:["low","medium"], care:"some", price:null, buyUrl:""},
-  {name:"Snake Plant", latin:"Sansevieria trifasciata", art:"snake", pet:false, easy:true,  light:["low","medium","high"], care:"little", price:null, buyUrl:""},
-  {name:"ZZ Plant", latin:"Zamioculcas zamiifolia", art:"snake", pet:false, easy:true,  light:["low","medium"], care:"little", price:null, buyUrl:""},
-  {name:"Fiddle Leaf Fig", latin:"Ficus lyrata", art:"tall", pet:false, easy:false, light:["medium","high"], care:"lots", price:null, buyUrl:""},
-  {name:"Alocasia", latin:"Alocasia spp.", art:"monstera", pet:false, easy:false, light:["medium"], care:"lots", price:null, buyUrl:""}
-];
-
-const CARE = {
-  "Spider Plant":{Water:"When the top few cm of soil are dry",Light:"Bright, indirect; tolerates shade",Humidity:"Average",Watch:"Brown tips usually mean tap-water minerals or very dry air"},
-  "Snake Plant":{Water:"Sparingly; let the soil dry out fully",Light:"Almost anything, from shade to bright",Humidity:"Average",Watch:"Overwatering causes root rot"},
-  "ZZ Plant":{Water:"Every 2–3 weeks; less in winter",Light:"Low to bright, indirect",Humidity:"Average",Watch:"Yellow leaves usually mean too much water"},
-  "Calathea":{Water:"Keep the soil lightly moist; rainwater or filtered water is best",Light:"Medium, indirect; no direct sun",Humidity:"High",Watch:"Crispy edges mean the air is too dry"},
-  "Fiddle Leaf Fig":{Water:"When the top 5 cm of soil are dry",Light:"Bright, indirect, near a window",Humidity:"Average to high",Watch:"Dislikes being moved and cold draughts"},
-  "Alocasia":{Water:"Keep the soil slightly moist, never soggy",Light:"Bright, indirect",Humidity:"High",Watch:"May go dormant in winter; ease off watering"}
-};
-
-/* ===== BOOK REVIEWS =====
-   Add featured reviews here (e.g. favourites from the discussion). Empty = shows a friendly placeholder. */
-const REVIEWS = [
-  // {title:"Book title", author:"Author name", reviewer:"First name", leaves:4, text:"A short review."},
-];
-
-const art = id => `<svg width="70%" viewBox="0 0 200 220"><use href="#${id}"/></svg>`;
-
-function renderPlants(filter){
-  const grid = document.getElementById('plant-grid');
-  const list = PLANTS.filter(p => filter==='all' || (filter==='pet'&&p.pet) || (filter==='easy'&&p.easy) || (filter==='low'&&p.light.includes('low')));
-  grid.innerHTML = list.map(p => `
-    <div class="card">
-      <div class="card-img">${art(p.art)}</div>
-      <div class="card-body">
-        <h3>${p.name}</h3><p class="latin">${p.latin}</p>
-        <div class="tags">
-          ${p.pet ? '<span class="tag">Pet-friendly</span>' : '<span class="tag warn">Keep away from pets</span>'}
-          ${p.easy ? '<span class="tag">Easy-care</span>' : ''}
-          ${p.light.includes('low') ? '<span class="tag">Low light OK</span>' : ''}
-        </div>
-        <div class="card-foot">
-          <span class="price">${p.price ? '£'+p.price : 'Coming soon'}</span>
-          ${p.buyUrl ? `<a class="btn btn-primary btn-sm" href="${p.buyUrl}" target="_blank" rel="noopener">Buy</a>` : `<a class="btn btn-ghost btn-sm" href="#newsletter">Notify me</a>`}
-        </div>
-      </div>
-    </div>`).join('');
-}
-document.querySelectorAll('.chip').forEach(c => c.addEventListener('click', () => {
-  document.querySelectorAll('.chip').forEach(x => x.classList.remove('active'));
-  c.classList.add('active'); renderPlants(c.dataset.filter);
-}));
-renderPlants('all');
-
-// Plant finder
-const answers = {};
-document.querySelectorAll('.q').forEach(q => q.querySelectorAll('.opt').forEach(o => o.addEventListener('click', () => {
-  q.querySelectorAll('.opt').forEach(x => x.classList.remove('sel'));
-  o.classList.add('sel'); answers[q.dataset.q] = o.dataset.v;
-})));
-document.getElementById('finder-go').addEventListener('click', () => {
-  const box = document.getElementById('finder-result');
-  box.style.display = 'block';
-  if (!answers.light || !answers.pets || !answers.time) { box.innerHTML = '<p>Please answer all three questions first.</p>'; return; }
-  const rank = {little:0, some:1, lots:2};
-  let matches = PLANTS.filter(p => p.light.includes(answers.light))
-    .filter(p => answers.pets==='no' || p.pet)
-    .filter(p => rank[p.care] <= rank[answers.time]);
-  if (!matches.length) matches = PLANTS.filter(p => answers.pets==='no' || p.pet).filter(p => p.easy);
-  box.innerHTML = `<h3>Your matches</h3><ul>${matches.slice(0,4).map(p=>`<li><strong>${p.name}</strong> <em>(${p.latin})</em>${p.pet?' · pet-friendly':''}</li>`).join('')}</ul>`;
-});
-
-// Reviews
-document.getElementById('reviews').innerHTML = REVIEWS.length
-  ? REVIEWS.map(v => `<div class="review"><h3>${v.title}</h3><p class="by">by ${v.author} · reviewed by ${v.reviewer}</p><div class="leaves">${'🌿'.repeat(v.leaves)}</div><p>${v.text}</p></div>`).join('')
-  : '<div class="review" style="grid-column:1/-1;text-align:center"><p>No reviews yet. Be the first to share what you\'re reading in the discussion below.</p></div>';
-
-// Care guides
-document.getElementById('care-guides').innerHTML = Object.entries(CARE).map(([name, g]) => `
-  <details><summary>${name}</summary><dl>${Object.entries(g).map(([k,v])=>`<dt>${k}</dt><dd>${v}</dd>`).join('')}</dl></details>`).join('');
-
-// Newsletter: shows a message until a real form service is connected
-document.getElementById('nl-form').addEventListener('submit', e => {
-  if (!e.target.getAttribute('action')) {
-    e.preventDefault();
-    document.getElementById('nl-msg').textContent = 'Thank you! Sign-ups open soon.';
-    e.target.reset();
-  }
-});
-
-document.getElementById('yr').textContent = new Date().getFullYear();
-document.querySelectorAll('#menu a').forEach(a => a.addEventListener('click', () => document.getElementById('menu').classList.remove('open')));
-</script>
+<script src="js/plants.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
