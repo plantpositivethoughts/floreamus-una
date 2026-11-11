@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://plantpositivethoughts.github.io/floreamus-una/sitemap.xml
