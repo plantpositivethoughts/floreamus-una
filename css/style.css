@@ -278,3 +278,4 @@
   footer a.social:hover{background:var(--sage);color:var(--forest)}
   .follow{background:var(--white)}
   .follow-links{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+  @media (max-width:900px){.areas-5 .area:last-child{grid-column:1/-1}}
