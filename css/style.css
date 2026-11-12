@@ -417,3 +417,4 @@
   .sicon{width:16px;height:16px;display:inline-block;vertical-align:-3px;margin-right:8px}
   .dicon{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:6px}
   footer a.social{display:inline-flex;align-items:center}
+  .sicon[src*="tiktok"]{width:18px;height:18px;vertical-align:-4px}
