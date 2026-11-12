@@ -404,3 +404,9 @@
   .recipe-photo{width:100%;border-radius:var(--radius);margin:0 0 1.6rem;aspect-ratio:4/3;object-fit:cover;box-shadow:0 10px 30px rgba(27,48,34,.12)}
   .harvest-top{align-items:start}
   .seed-logo{width:56px;height:56px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
+  .seed.has-logo{display:grid;grid-template-columns:36px 1fr;column-gap:12px;align-content:start}
+  .seed.has-logo .seed-logo{width:36px;height:36px;margin:0;box-shadow:0 1px 4px rgba(0,0,0,.12);align-self:center}
+  .seed.has-logo strong{align-self:center}
+  .seed.has-logo span,.seed.has-logo small{grid-column:1/-1}
+  .seed.has-logo span{margin-top:8px}
+  .seed.has-logo{grid-template-rows:auto 1fr auto;align-content:stretch}.seed.has-logo small{align-self:end}
