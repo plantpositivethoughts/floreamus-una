@@ -403,3 +403,4 @@
   @media (max-width:900px){.areas-5{grid-template-columns:1fr 1fr}.areas-5 .area:last-child{grid-column:auto}.areas-5 .area{grid-template-columns:1fr}.areas-5 .area img{grid-row:auto}}
   .recipe-photo{width:100%;border-radius:var(--radius);margin:0 0 1.6rem;aspect-ratio:4/3;object-fit:cover;box-shadow:0 10px 30px rgba(27,48,34,.12)}
   .harvest-top{align-items:start}
+  .seed-logo{width:56px;height:56px;border-radius:50%;object-fit:cover;margin-bottom:10px;box-shadow:0 2px 8px rgba(0,0,0,.12)}
