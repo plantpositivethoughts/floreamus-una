@@ -101,7 +101,7 @@
   #finder-result ul{margin:.6rem 0 0 1.1rem}
 
   /* Collections */
-  .bloomscape{background:var(--sand)}
+  .grove{background:var(--sand)}
   .collections{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
   .collection{background:var(--white);border-radius:var(--radius);padding:30px;display:flex;flex-direction:column}
   .collection .level{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;font-weight:600;color:var(--sage-dark)}
@@ -365,3 +365,15 @@
   .seed strong{color:var(--forest);font-size:1rem}
   .seed span{color:var(--muted);font-size:.9rem}
   .seed small{color:var(--brown);font-size:.78rem;margin-top:auto;padding-top:6px}
+  /* Seed Library: roomier layout */
+  .seed-wrap{max-width:1000px}
+  .seed-sec{margin-bottom:64px;padding-bottom:56px;border-bottom:1px solid var(--sand)}
+  .seed-sec:last-of-type{border-bottom:0}
+  .seed-sec h2{margin-bottom:.5rem}
+  .seed-sec .lede{margin-bottom:1.8rem !important}
+  .seeds{grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:22px}
+  .seed{padding:26px 28px;gap:8px;line-height:1.55;box-shadow:0 4px 18px rgba(27,48,34,.05)}
+  .seed strong{font-family:var(--serif);font-size:1.3rem;line-height:1.25}
+  .seed span{font-size:.93rem}
+  .seed small{padding-top:14px;letter-spacing:.02em}
+  @media (max-width:700px){.seed-sec{margin-bottom:44px;padding-bottom:36px}}

@@ -1,6 +1,6 @@
 /* =====================================================================
    FLOREAMUS UNA — PLANT LIST
-   This one list feeds The Sill (shop), the Plant Finder and the
+   This one list feeds The Windowbox (shop), the Plant Finder and the
    care guides in The Greenroom. Edit here and every page updates.
 
    pet:    true = non-toxic to cats and dogs, false = keep away from pets
