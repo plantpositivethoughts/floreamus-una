@@ -413,3 +413,7 @@
   .seed-icon{width:36px;height:36px;border-radius:50%;background:var(--sage-light);display:flex;align-items:center;justify-content:center;align-self:center}
   .seed-icon svg{width:19px;height:19px;fill:none;stroke:var(--forest);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
   .seed-icon svg{width:21px;height:21px;stroke-width:1.8}
+  /* Platform icons (official glyphs, unaltered) */
+  .sicon{width:16px;height:16px;display:inline-block;vertical-align:-3px;margin-right:8px}
+  .dicon{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:6px}
+  footer a.social{display:inline-flex;align-items:center}
