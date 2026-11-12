@@ -396,3 +396,8 @@
   .steps li{counter-increment:s;position:relative;padding-left:46px;margin-bottom:1.1rem}
   .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600}
   @media (max-width:700px){.recipe-grid{grid-template-columns:1fr;gap:10px}}
+  .areas-5{grid-template-columns:repeat(3,1fr)}
+  .areas-5 .area{display:grid;grid-template-columns:84px 1fr;column-gap:16px;align-items:center}
+  .areas-5 .area img{grid-row:span 3;margin:0}
+  .areas-5 .area h3{margin:.1rem 0}
+  @media (max-width:900px){.areas-5{grid-template-columns:1fr 1fr}.areas-5 .area:last-child{grid-column:auto}.areas-5 .area{grid-template-columns:1fr}.areas-5 .area img{grid-row:auto}}
