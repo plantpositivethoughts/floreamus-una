@@ -387,3 +387,12 @@
   .herb dd{color:var(--muted)}
   .herb .tag{align-self:flex-start;margin-top:auto}
   @media (max-width:700px){.harvest-top{grid-template-columns:1fr}}
+  /* Recipes */
+  .recipe-grid{display:grid;grid-template-columns:260px 1fr;gap:40px;margin-bottom:1.4rem}
+  .recipe-grid h2{margin-top:0}
+  .ing ul{list-style:none;margin:0}
+  .ing li{padding:8px 0;border-bottom:1px dashed var(--sand);margin:0;font-size:.95rem}
+  .steps{counter-reset:s;list-style:none;margin:0}
+  .steps li{counter-increment:s;position:relative;padding-left:46px;margin-bottom:1.1rem}
+  .steps li::before{content:counter(s);position:absolute;left:0;top:-2px;width:30px;height:30px;border-radius:50%;background:var(--forest);color:var(--cream);display:flex;align-items:center;justify-content:center;font-size:.85rem;font-weight:600}
+  @media (max-width:700px){.recipe-grid{grid-template-columns:1fr;gap:10px}}
