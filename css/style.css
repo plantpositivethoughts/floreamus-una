@@ -410,3 +410,6 @@
   .seed.has-logo span,.seed.has-logo small{grid-column:1/-1}
   .seed.has-logo span{margin-top:8px}
   .seed.has-logo{grid-template-rows:auto 1fr auto;align-content:stretch}.seed.has-logo small{align-self:end}
+  .seed-icon{width:36px;height:36px;border-radius:50%;background:var(--sage-light);display:flex;align-items:center;justify-content:center;align-self:center}
+  .seed-icon svg{width:19px;height:19px;fill:none;stroke:var(--forest);stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+  .seed-icon svg{width:21px;height:21px;stroke-width:1.8}
