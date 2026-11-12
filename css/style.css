@@ -356,3 +356,12 @@
   .az a:hover{background:var(--sage-light)}
   .card h3 a{color:inherit}
   @media (max-width:700px){.plant-head{grid-template-columns:1fr}.plant-art{max-width:160px}.facts{grid-template-columns:repeat(2,1fr)}.rels{grid-template-columns:1fr}}
+  /* Seed Library */
+  .seed-sec{margin-bottom:48px}
+  .seed-sec h2{font-size:clamp(1.7rem,3vw,2.2rem)}
+  .seeds{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:14px}
+  .seed{background:var(--white);border-radius:var(--radius);padding:18px 20px;text-decoration:none;display:flex;flex-direction:column;gap:4px;border:1px solid transparent;transition:.2s}
+  .seed:hover{border-color:var(--sage);transform:translateY(-2px)}
+  .seed strong{color:var(--forest);font-size:1rem}
+  .seed span{color:var(--muted);font-size:.9rem}
+  .seed small{color:var(--brown);font-size:.78rem;margin-top:auto;padding-top:6px}

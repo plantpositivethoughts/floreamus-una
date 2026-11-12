@@ -22,7 +22,7 @@ const $ = id => document.getElementById(id);
 document.querySelector('.menu-btn')?.addEventListener('click', () => $('menu').classList.toggle('open'));
 if ($('yr')) $('yr').textContent = new Date().getFullYear();
 
-/* ---------- The Windowbox: plant grid with filters ---------- */
+/* ---------- The Sill: plant grid with filters ---------- */
 function renderPlants(filter) {
   const grid = $('plant-grid'); if (!grid) return;
   const list = PLANTS.filter(p => filter === 'all' || (filter === 'pet' && p.pet) || (filter === 'easy' && p.easy) || (filter === 'low' && p.light.includes('low')));

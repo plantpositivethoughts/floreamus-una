@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://floreamusuna.co.uk/sitemap.xml
+Sitemap: https://plantpositivethoughts.github.io/floreamus-una/sitemap.xml
