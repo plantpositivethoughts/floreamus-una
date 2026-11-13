@@ -458,3 +458,7 @@
 /* ---------- The Listening Room header: music stave instead of leaves ---------- */
 .page-hero.music-hero{background:#fff url("../images/listening-banner.jpg") center bottom/min(100%,1200px) auto no-repeat;padding-bottom:calc(min(100vw,1200px)*.34)}
 @media (max-width:700px){.page-hero.music-hero{padding-bottom:calc(100vw*.6)}}
+.listen-btn{display:inline-flex;align-items:center;gap:8px;margin-top:14px;padding:8px 16px;border-radius:999px;border:1px solid var(--forest);color:var(--forest);font-size:.88rem;font-weight:500;text-decoration:none}
+.listen-btn img{width:18px;height:18px}
+.listen-btn.on-dark{border-color:rgba(245,242,237,.55);color:var(--cream)}
+.listen-btn:hover{background:rgba(141,170,145,.18)}
