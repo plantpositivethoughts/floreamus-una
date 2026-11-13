@@ -418,3 +418,39 @@
   .dicon{width:14px;height:14px;display:inline-block;vertical-align:-2px;margin-right:6px}
   footer a.social{display:inline-flex;align-items:center}
   .sicon[src*="tiktok"]{width:18px;height:18px;vertical-align:-4px}
+
+/* ---------- The Listening Room ---------- */
+.now-playing{display:flex;gap:18px;align-items:flex-start;background:var(--white);border-radius:var(--radius);padding:26px 30px;margin-top:22px}
+.now-playing h3{margin:.1rem 0 .3rem}
+.now-playing p{color:var(--muted);font-size:.95rem}
+.np-artist{font-weight:400;color:var(--muted)}
+.np-dot{width:12px;height:12px;border-radius:50%;background:var(--sage);margin-top:6px;flex-shrink:0;animation:np 2.4s ease-in-out infinite}
+@keyframes np{0%,100%{opacity:.35}50%{opacity:1}}
+@media (prefers-reduced-motion:reduce){.np-dot{animation:none}}
+
+/* ---------- The Quiet Corner ---------- */
+.ex-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.ex{background:var(--white);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column}
+.ex .seed-icon{margin-bottom:12px}
+.ex h3{margin:0}
+.ex-sub{color:var(--sage-dark);opacity:.7;font-size:.9rem;margin:.2rem 0 .8rem}
+.ex ol{margin:0 0 .8rem 1.2rem;color:var(--muted);font-size:.93rem}
+.ex li{margin-bottom:.35rem}
+.ex-note{font-size:.85rem;color:var(--brown);margin-bottom:.8rem}
+.ex .ex-start{margin-top:auto;align-self:flex-start}
+.ex-timer{position:relative;display:flex;justify-content:space-between;align-items:center;gap:16px;background:var(--forest);color:var(--cream);border-radius:var(--radius);padding:16px 24px;margin-top:28px;box-shadow:0 6px 20px rgba(0,0,0,.15)}
+.ex-timer-label{font-size:.9rem;opacity:.85;margin:0}
+.ex-timer-time{font-family:var(--serif);font-size:2.2rem;line-height:1.1;margin:0}
+.ex-timer-btns{display:flex;gap:10px}
+.ex-timer .btn-ghost{color:var(--cream);border-color:rgba(245,242,237,.5)}
+.ex-timer.running .ex-timer-time{color:var(--sage-light)}
+.ex-care{background:var(--sand);border-radius:var(--radius);padding:26px 30px;margin-top:28px}
+.ex-care p{color:var(--muted);font-size:.95rem}
+.ex-care a{color:var(--brown)}
+@media (max-width:700px){.ex-grid{grid-template-columns:1fr}.ex-timer{padding:14px 18px}.ex-timer-time{font-size:1.8rem}}
+
+/* ---------- Homepage: eight areas ---------- */
+@media (min-width:901px){.areas-8{grid-template-columns:repeat(4,1fr)}.areas-8 .area{grid-template-columns:1fr}.areas-8 .area img{grid-row:auto}}
+.ex .seed-icon{align-self:flex-start}
+.ex-timer.running{position:sticky;bottom:16px;z-index:5}
+.ex-timer .btn-primary{background:var(--sage);color:var(--forest);border-color:var(--sage)}
