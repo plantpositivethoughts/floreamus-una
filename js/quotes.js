@@ -4,7 +4,7 @@
    when you add quotes to the app they appear here automatically. If the
    app can't be reached, it uses this backup copy.
    ===================================================================== */
-const APP_URL = 'https://plantpositivethoughts.github.io/flourish-together/';
+const APP_URL = 'https://app.floreamusuna.co.uk/';
 const BACKUP_QUOTES = [
   "Water yourself as you water your plants.",
   "Growth is slow, then sudden. Keep tending.",
