@@ -462,3 +462,4 @@
 .listen-btn img{width:18px;height:18px}
 .listen-btn.on-dark{border-color:rgba(245,242,237,.55);color:var(--cream)}
 .listen-btn:hover{background:rgba(141,170,145,.18)}
+.spotify-embed{display:block;width:100%;border:0;border-radius:12px;margin-top:16px}

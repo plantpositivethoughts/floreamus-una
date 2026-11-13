@@ -5,12 +5,15 @@
    ===================================================================== */
 
 // Album of the month, e.g.
-// { title: 'Album name', artist: 'Artist', note: 'Why we chose it.', link: 'https://open.spotify.com/album/...' }
+// { title: 'Album name', artist: 'Artist', note: 'Why we chose it.', link: 'https://open.spotify.com/album/...',
+//   embed: 'https://open.spotify.com/embed/album/...' }
 const ALBUM_OF_MONTH = {
   title: "I'm the Problem",
   artist: 'Morgan Wallen',
   note: "Morgan Wallen's fourth album: 37 honest, reflective country songs about owning your mistakes and growing from them, with guests including Tate McRae, Post Malone and Eric Church. Which track is your favourite? Tell us below.",
-  link: 'https://open.spotify.com/search/I%27m%20the%20Problem%20Morgan%20Wallen'
+  link: 'https://open.spotify.com/track/3HlWVKwU0JqJXqJK9DWHnZ',
+  // Spotify's official player: shows the cover and plays the music on the page
+  embed: 'https://open.spotify.com/embed/track/3HlWVKwU0JqJXqJK9DWHnZ?utm_source=generator&theme=0'
 };
 
 // What Floreamus Una is listening to today, e.g.
@@ -37,7 +40,9 @@ const MUSIC_PICKS = [];
     a.innerHTML = '<p class="eyebrow" style="color:var(--sage)">Album of the month</p>' +
       '<h3>' + esc(ALBUM_OF_MONTH.title) + '</h3>' +
       '<p style="opacity:1;margin-bottom:.4rem">by ' + esc(ALBUM_OF_MONTH.artist) + '</p>' +
-      '<p>' + esc(ALBUM_OF_MONTH.note) + '</p>' + link(ALBUM_OF_MONTH, 'Listen', true);
+      '<p>' + esc(ALBUM_OF_MONTH.note) + '</p>' +
+      (ALBUM_OF_MONTH.embed ? '<iframe class="spotify-embed" src="' + esc(ALBUM_OF_MONTH.embed) + '" height="152" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy" title="Listen to ' + esc(ALBUM_OF_MONTH.title) + ' on Spotify"></iframe>' : '') +
+      link(ALBUM_OF_MONTH, 'Listen', true);
   }
 
   var n = document.getElementById('now-playing');
