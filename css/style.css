@@ -454,3 +454,7 @@
 .ex .seed-icon{align-self:flex-start}
 .ex-timer.running{position:sticky;bottom:16px;z-index:5}
 .ex-timer .btn-primary{background:var(--sage);color:var(--forest);border-color:var(--sage)}
+
+/* ---------- The Listening Room header: music stave instead of leaves ---------- */
+.page-hero.music-hero{background:#fff url("../images/listening-banner.jpg") center bottom/min(100%,1200px) auto no-repeat;padding-bottom:calc(min(100vw,1200px)*.34)}
+@media (max-width:700px){.page-hero.music-hero{padding-bottom:calc(100vw*.6)}}
