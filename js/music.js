@@ -6,7 +6,12 @@
 
 // Album of the month, e.g.
 // { title: 'Album name', artist: 'Artist', note: 'Why we chose it.', link: 'https://open.spotify.com/album/...' }
-const ALBUM_OF_MONTH = null;
+const ALBUM_OF_MONTH = {
+  title: "I'm the Problem",
+  artist: 'Morgan Wallen',
+  note: "Morgan Wallen's fourth album: 37 honest, reflective country songs about owning your mistakes and growing from them, with guests including Tate McRae, Post Malone and Eric Church. Which track is your favourite? Tell us below.",
+  link: 'https://open.spotify.com/search/I%27m%20the%20Problem%20Morgan%20Wallen'
+};
 
 // What Floreamus Una is listening to today, e.g.
 // { title: 'Song or album', artist: 'Artist', note: 'Perfect for a slow Sunday repot.', link: '' }
