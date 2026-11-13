@@ -128,3 +128,10 @@ document.querySelectorAll('.carousel').forEach(c => {
   track.addEventListener('scroll', () => requestAnimationFrame(update));
   update();
 });
+
+/* ---------- "More" menu: tap to open on touch screens ---------- */
+document.querySelectorAll('.more-btn').forEach(b => b.addEventListener('click', e => {
+  const li = b.closest('.has-more'); const open = li.classList.toggle('open');
+  b.setAttribute('aria-expanded', open); e.stopPropagation();
+}));
+document.addEventListener('click', e => { document.querySelectorAll('.has-more.open').forEach(li => { if (!li.contains(e.target)) { li.classList.remove('open'); li.querySelector('.more-btn').setAttribute('aria-expanded','false'); } }); });

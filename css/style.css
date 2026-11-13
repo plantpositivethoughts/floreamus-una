@@ -463,3 +463,21 @@
 .listen-btn.on-dark{border-color:rgba(245,242,237,.55);color:var(--cream)}
 .listen-btn:hover{background:rgba(141,170,145,.18)}
 .spotify-embed{display:block;width:100%;border:0;border-radius:12px;margin-top:16px}
+
+/* ---------- Menu: "More" dropdown with every section ---------- */
+.nav .has-more{position:relative}
+.more-btn{background:none;border:0;padding:0;font:inherit;font-size:.92rem;font-weight:500;color:var(--muted);cursor:pointer}
+.more-btn:hover,.more-btn.active{color:var(--forest)}
+.nav ul.submenu{display:none;position:absolute;top:calc(100% + 14px);right:-12px;flex-direction:column;gap:2px;min-width:220px;padding:10px;background:var(--white);border-radius:12px;box-shadow:0 10px 30px rgba(27,48,34,.14);z-index:20}
+.nav ul.submenu a{display:block;padding:8px 12px;border-radius:8px;border:0}
+.nav ul.submenu a:hover{background:var(--sand-light)}
+.has-more:hover .submenu,.has-more:focus-within .submenu,.has-more.open .submenu{display:flex}
+.has-more::after{content:"";position:absolute;left:0;right:0;top:100%;height:16px}
+@media (max-width:1100px){
+  .nav ul#menu.open{max-height:calc(100vh - 70px);overflow-y:auto}
+  .more-btn{display:none}
+  .has-more::after{display:none}
+  .nav ul.submenu{display:flex;position:static;box-shadow:none;background:none;padding:0;min-width:0;gap:16px;border-top:1px solid var(--sand);padding-top:16px}
+  .nav ul.submenu a{padding:0}
+  .nav ul.submenu a:hover{background:none}
+}
